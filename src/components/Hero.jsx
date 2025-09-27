@@ -24,13 +24,19 @@ export default function Hero() {
       <div className="flex gap-4">
         <a
           href="#projects"
-          className="px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition"
+          className="px-6 py-3 bg-black text-white rounded-md 
+                    hover:bg-gray-800 
+                    transform hover:-translate-y-1 hover:shadow-lg 
+                    transition duration-200 ease-in-out"
         >
           View My Work
         </a>
         <a
           href="#contact"
-          className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100 transition"
+          className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-md 
+                    hover:bg-gray-100 
+                    transform hover:-translate-y-1 hover:shadow-lg 
+                    transition duration-200 ease-in-out"
         >
           Get In Touch
         </a>

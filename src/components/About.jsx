@@ -4,11 +4,11 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Section Title */}
+
         <TitleComponent> About Me </TitleComponent>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Left side: Bio */}
+
           <div>
             <h3 className="text-xl font-semibold mb-4">Passionate Developer</h3>
             <p className="text-gray-600 mb-4">
@@ -22,7 +22,7 @@ export default function About() {
             </p>
           </div>
 
-          {/* Right side: Skills */}
+
           <div className="space-y-4">
             <div>
               <h4 className="font-medium text-gray-700">Frontend Development</h4>
