@@ -11,7 +11,7 @@ export default function Hero() {
 
       {/* Subtitle */}
       <h2 className="text-xl md:text-2xl text-gray-600 mb-6">
-        Junior Level Full Stack Developer
+        Junior Full Stack Developer
       </h2>
 
       {/* Description */}
