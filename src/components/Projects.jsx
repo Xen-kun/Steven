@@ -2,8 +2,8 @@ import TitleComponent from "./TitleComponent"
 
 export default function Project() {
     return(
-        <section id="projects" className="py-20 bg-gray-100">
-            <div className="container mx-auto px-6 md:px-10 text-center">
+        <section id="projects" className="bg-gray-100 w-full max-w-5xl mx-auto">
+            <div className="container mx-auto px-6 md:px-0 text-center">
                 <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
                 <span className="block w-20 h-0.5 bg-black mx-auto mb-8"></span>
                 <p className="text-gray-600 max-w-2xl mx-auto mb-12">
@@ -11,14 +11,14 @@ export default function Project() {
                 </p>
 
                 {/* Projects Grid */}
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Card 1*/}
                     <div className="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 overflow-hidden group flex flex-col">
                         <div className="relative overflow-hidden">
                             <img 
-                                src="../public/images/Budgetplanner.png" 
+                                src="../images/Budgetplanner.png" 
                                 alt="Budget Planner" 
-                                className="rounded-t-lg w-full h-auto transition-transform duration-400 ease-in-out group-hover:scale-105 group-hover:brightness-75"
+                                className="rounded-t-lg w-full h-56 object-cover transition-transform duration-400 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                             />
                         </div>
 
@@ -48,9 +48,9 @@ export default function Project() {
                     <div className="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 overflow-hidden group flex flex-col">
                         <div className="relative overflow-hidden">
                             <img 
-                                src="../public/images/DeNovoAssembly.png" 
+                                src="../images/DeNovoAssembly.png" 
                                 alt="Budget Planner" 
-                                className="rounded-t-lg w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
+                                className="rounded-t-lg w-full h-56 object-cover transition-transform duration-400 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                             />
                         </div>
 
@@ -83,9 +83,9 @@ export default function Project() {
                     <div className="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 overflow-hidden group flex flex-col">
                         <div className="relative overflow-hidden">
                             <img 
-                                src="../public/images/WeatherAnalytics.png" 
+                                src="../images/WeatherAnalytics.png" 
                                 alt="Budget Planner" 
-                                className="rounded-t-lg w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
+                                className="rounded-t-lg w-full h-56 object-cover transition-transform duration-400 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                             />
                         </div>
 

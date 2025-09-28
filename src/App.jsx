@@ -2,40 +2,54 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Projects from "./components/Projects"
+import Projects from "./components/Projects";
+import Techstacks from "./components/Techstack";
 
-function App() {
+export default function App() {
   return (
     <div className="font-sans bg-white text-gray-900">
       <Navbar />
 
+      {/* Home Section */}
       <section id="home" className="min-h-screen flex items-center justify-center">
         <Hero />
       </section>
 
-      <section id="about" className="py-20 px-6 max-w-6xl mx-auto">
-        <About />
+      {/* About */}
+      <section id="about" className="py-20 w-full bg-white">
+        <div className="px-6 max-w-6xl mx-auto">
+          <About />
+        </div>
       </section>
 
-      <section id="projects" className="py-20 px-6 max-w-6xl mx-auto">
-        <Projects />
+      {/* Projects */}
+      <section id="projects" className="py-20 w-full bg-gray-100">
+        <div className="px-6 max-w-6xl mx-auto">
+          <Projects />
+        </div>
       </section>
 
-      <section id="techstack" className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Tech Stack</h2>
-        <p className="text-center text-gray-600">[Coming soon...]</p>
+      {/* Tech Stack */}
+      <section id="techstack" className="py-20 w-full bg-white">
+        <div className="px-6 max-w-6xl mx-auto text-center">
+          <Techstacks />
+        </div>
       </section>
 
-      <section id="contact" className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Contact Me</h2>
-        <p className="text-center text-gray-600">[Coming soon...]</p>
+      {/* Contact */}
+      <section id="contact" className="py-20 w-full bg-gray-100">
+        <div className="px-6 max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+          <p className="text-gray-600">[Coming soon...]</p>
+        </div>
       </section>
 
+      {/* Footer */}
       <footer className="py-6 text-center border-t mt-12">
-        <p className="text-sm text-gray-500">© {new Date().getFullYear()} Steven. All rights reserved.</p>
+        <p className="text-sm text-gray-500">
+          © {new Date().getFullYear()} Steven. All rights reserved.
+        </p>
       </footer>
     </div>
   );
 }
-
-export default App;

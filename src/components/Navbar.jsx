@@ -1,19 +1,83 @@
+import { useState } from "react";
 
-function Navbar() {
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="fixed w-full bg-white shadow-sm z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold">Steven.</a>
-        <div className="space-x-6">
-          <a href="#about" className="hover:text-indigo-600">About</a>
-          <a href="#projects" className="hover:text-indigo-600">Projects</a>
-          <a href="#techstack" className="hover:text-indigo-600">Tech Stack</a>
-          <a href="#contact" className="hover:text-indigo-600">Contact</a>
-          <a href="#contact" className="bg-black text-white px-4 py-2 rounded-lg hover:bg-indigo-600">Hire Me</a>
+    <header className="fixed top-0 left-0 w-full bg-white shadow z-50">
+      <div className="container mx-auto flex items-center py-4 px-6">
+        
+        {/* Logo */}
+        <h1 className="text-xl font-bold">Steven.</h1>
+
+        {/* Push nav to the right */}
+        <div className="ml-auto flex items-center">
+          {/* Hamburger Button (Mobile) */}
+          <button
+            className="md:hidden p-2 rounded-lg focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg
+              className="w-6 h-6 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {isOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+
+          {/* Nav Links */}
+          <nav
+            className={`${
+              isOpen ? "block" : "hidden"
+            } absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:block`}
+          >
+            <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-4 md:p-0">
+              {["About", "Projects", "Tech Stack", "Contact"].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item.toLowerCase().replace(" ", "")}`}
+                    className="block px-3 py-2 rounded-md 
+                               hover:bg-gray-100 md:hover:bg-transparent
+                               md:relative md:inline-block md:after:content-['']
+                               md:after:absolute md:after:left-0 md:after:-bottom-1
+                               md:after:w-0 md:after:h-[2px] md:after:bg-blue-500
+                               md:hover:after:w-full md:after:transition-all md:after:duration-300
+                               md:hover:text-blue-500"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="#contact"
+                  className="block bg-black text-white px-4 py-2 rounded-md 
+                             hover:bg-gray-800 md:inline-block"
+                >
+                  Hire Me
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
-
-export default Navbar;
