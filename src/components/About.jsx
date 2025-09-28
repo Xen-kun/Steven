@@ -25,6 +25,10 @@ export default function About() {
 
           <div className="space-y-4">
             <div>
+              <h2 className="text-xl font-semibold mb-4">What I do?</h2>
+            </div>
+            
+            <div>
               <h4 className="font-medium text-gray-700">Frontend Development</h4>
             </div>
 

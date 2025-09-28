@@ -4,29 +4,26 @@ const techCategories = [
   {
     category: "Frontend",
     technologies: [
-      "React", "Next.js", "Vue.js", "TypeScript", "JavaScript", 
+      "React.js", "JavaScript", 
       "Tailwind CSS", "SCSS", "HTML5", "CSS3"
     ]
   },
   {
     category: "Backend",
     technologies: [
-      "Node.js", "Express", "FastAPI", "Python", "PostgreSQL", 
-      "MongoDB", "Redis", "GraphQL", "REST APIs"
+      "Node.js", "Express", "FastAPI", "Python", "C++", "C", "MySQL", "PHP Laravel"
     ]
   },
   {
     category: "Tools & DevOps",
     technologies: [
-      "Git", "Docker", "AWS", "Vercel", "Firebase", 
-      "Jenkins", "Linux", "Nginx", "CI/CD"
+      "Git", "Docker", "Vercel", "Linux", "Nginx", "CI/CD"
     ]
   },
   {
     category: "Mobile & Others",
     technologies: [
-      "React Native", "Flutter", "Figma", "Adobe XD", 
-      "Photoshop", "Webpack", "Vite", "ESLint"
+      "Figma", "Webpack", "Vite"
     ]
   }
 ];
