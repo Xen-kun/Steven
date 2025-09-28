@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Techstacks from "./components/Techstack";
@@ -12,7 +12,7 @@ export default function App() {
 
       {/* Home Section */}
       <section id="home" className="min-h-screen flex items-center justify-center">
-        <Hero />
+        <Home />
       </section>
 
       {/* About */}

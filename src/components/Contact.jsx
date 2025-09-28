@@ -27,6 +27,9 @@ export function Contact() {
                     <a 
                         href="mailto:stevedaleja2001@gmail.com"
                         rel="noopener noreferrer"
+                        className="hover:bg-black hover:text-white  
+                                transform hover:-translate-y-1 hover:shadow-lg 
+                                transition duration-200 ease-in-out"
                     >
                         <Mail className="w-4 h-4 mr-2" />
                         stevedaleja2001@gmail.com
@@ -47,6 +50,9 @@ export function Contact() {
                     href="https://github.com/Xen-kun" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="hover:bg-black hover:text-white  
+                    transform hover:-translate-y-1 hover:shadow-lg 
+                    transition duration-200 ease-in-out"
                 >
                     <Github className="w-4 h-4 mr-2" />
                     View GitHub

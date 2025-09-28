@@ -1,4 +1,4 @@
-import TitleComponent from "./TitleComponent"
+import TitleComponent from "./TitleUnderline"
 
 export default function About() {
   return (
@@ -17,13 +17,13 @@ export default function About() {
               I believe in writing clean, maintainable code and following best practices.
             </p>
             <p className="text-gray-600">
-              When I'm not coding, you can find me exploring new frameworks, contributing to open source projects, 
-              or sharing knowledge with the developer community.
+              When I'm not coding, you can find me exploring new frameworks and trends, contributing to open source projects, 
+             collaborating or sharing knowledge with the developer community.
             </p>
           </div>
 
 
-          <div className="space-y-4">
+          <div className="space-y-4 mx-auto md:px-12">
             <div>
               <h2 className="text-xl font-semibold mb-4">What I do?</h2>
             </div>

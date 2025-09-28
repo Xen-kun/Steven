@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Home() {
   return (
     <section
       id="home"
@@ -25,7 +25,7 @@ export default function Hero() {
         <a
           href="#projects"
           className="px-6 py-3 bg-black text-white rounded-md 
-                    hover:bg-gray-800 
+                    hover:bg-white hover:text-black  
                     transform hover:-translate-y-1 hover:shadow-lg 
                     transition duration-200 ease-in-out"
         >
@@ -34,7 +34,7 @@ export default function Hero() {
         <a
           href="#contact"
           className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-md 
-                    hover:bg-gray-100 
+                    hover:bg-black hover:text-white  
                     transform hover:-translate-y-1 hover:shadow-lg 
                     transition duration-200 ease-in-out"
         >

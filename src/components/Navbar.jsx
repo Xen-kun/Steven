@@ -1,14 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "projects", "techstack", "contact"];
+      const scrollPos = window.scrollY + 100; // offset for header height
+
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollPos && scrollPos < el.offsetTop + el.offsetHeight) {
+          setActiveSection(id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initialize on load
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = ["About", "Projects", "Tech Stack", "Contact"];
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow z-50">
       <div className="container mx-auto flex items-center py-4 px-6">
         
         {/* Logo */}
-        <h1 className="text-xl font-bold">Steven.</h1>
+        <a href="#home" className="hover:text-blue-600 transition-colors duration-200">
+          <h1 className="text-xl font-bold">Steven.</h1>
+        </a>
 
         {/* Push nav to the right */}
         <div className="ml-auto flex items-center">
@@ -49,22 +74,27 @@ export default function Header() {
             } absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:block`}
           >
             <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-4 md:p-0">
-              {["About", "Projects", "Tech Stack", "Contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace(" ", "")}`}
-                    className="block px-3 py-2 rounded-md 
-                               hover:bg-gray-100 md:hover:bg-transparent
-                               md:relative md:inline-block md:after:content-['']
-                               md:after:absolute md:after:left-0 md:after:-bottom-1
-                               md:after:w-0 md:after:h-[2px] md:after:bg-blue-500
-                               md:hover:after:w-full md:after:transition-all md:after:duration-300
-                               md:hover:text-blue-500"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const id = item.toLowerCase().replace(" ", "");
+                const isActive = activeSection === id;
+                return (
+                  <li key={item}>
+                    <a
+                      href={`#${id}`}
+                      className={`block px-3 py-2 rounded-md 
+                                 hover:bg-gray-100 md:hover:bg-transparent
+                                 md:relative md:inline-block md:after:content-['']
+                                 md:after:absolute md:after:left-0 md:after:-bottom-1
+                                 md:after:w-0 md:after:h-[2px] md:after:bg-blue-500
+                                 md:hover:after:w-full md:after:transition-all md:after:duration-300
+                                 md:hover:text-blue-500
+                                 ${isActive ? "md:after:w-full md:text-blue-500" : ""}`}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
               <li>
                 <a
                   href="#contact"
