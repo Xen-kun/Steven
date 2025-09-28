@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section
-      id="hero"
+      id="home"
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-white"
     >
       {/* Title */}
