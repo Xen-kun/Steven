@@ -32,7 +32,8 @@ export default function App() {
       {/* Tech Stack */}
       <section id="techstack" className="py-20 w-full bg-white">
         <div className="px-6 max-w-6xl mx-auto text-center">
-          <Techstacks />
+          <h2 className="text-3xl font-bold mb-8">Techstacks</h2>
+          <p className="text-gray-600">[Coming soon...]</p>
         </div>
       </section>
 
