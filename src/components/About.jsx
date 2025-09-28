@@ -23,9 +23,9 @@ export default function About() {
           </div>
 
 
-          <div className="space-y-4 mx-auto md:px-12">
+          <div className="space-y-4 md:px-12">
             <div>
-              <h2 className="text-xl font-semibold mb-4">What I do?</h2>
+              <h2 className="text-xl font-semibold mb-4">What I can do</h2>
             </div>
             
             <div>
