@@ -32,7 +32,7 @@ export default function Header() {
         
         {/* Logo */}
         <a href="#home" className="hover:text-blue-600 transition-colors duration-200">
-          <h1 className="text-xl font-bold">Steven.</h1>
+          <h1 className="text-xl font-bold">&lt;/Steven&gt;</h1>
         </a>
 
         {/* Push nav to the right */}
