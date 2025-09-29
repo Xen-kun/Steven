@@ -31,7 +31,9 @@ export default function Header() {
       <div className="container mx-auto flex items-center py-4 px-6">
         
         {/* Logo */}
-        <a href="#home" className="hover:text-blue-600 transition-colors duration-200">
+        <a href="#home" 
+          className="text-4xl font-mono font-bold animate-rgb-glow"
+        >
           <h1 className="text-xl font-bold">&lt;/Steven&gt;</h1>
         </a>
 
