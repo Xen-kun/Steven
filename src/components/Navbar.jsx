@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +17,12 @@ export default function Header() {
           break;
         }
       }
+
+      setScrolled(window.scrollY > 10); // toggle glass effect when scrolling
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initialize on load
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,13 +30,16 @@ export default function Header() {
   const navItems = ["About", "Projects", "Tech Stack", "Contact"];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        scrolled
+          ? "bg-white/30 backdrop-blur-md border-b border-white/20"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center py-4 px-6">
-        
         {/* Logo */}
-        <a href="#home" 
-          className="text-4xl font-mono font-bold animate-rgb-glow"
-        >
+        <a href="#home" className="text-4xl font-mono font-bold animate-rgb-glow">
           <h1 className="text-xl font-bold">&lt;/Steven&gt;</h1>
         </a>
 
@@ -73,7 +79,7 @@ export default function Header() {
           <nav
             className={`${
               isOpen ? "block" : "hidden"
-            } absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:block`}
+            } absolute top-full left-0 w-full bg-white/30 backdrop-blur-md border-b border-white/20 md:border-0 md:bg-transparent md:backdrop-blur-0 md:static md:block`}
           >
             <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-4 md:p-0">
               {navItems.map((item) => {
@@ -84,7 +90,7 @@ export default function Header() {
                     <a
                       href={`#${id}`}
                       className={`block px-3 py-2 rounded-md 
-                                 hover:bg-gray-100 md:hover:bg-transparent
+                                 hover:bg-white/20 md:hover:bg-transparent
                                  md:relative md:inline-block md:after:content-['']
                                  md:after:absolute md:after:left-0 md:after:-bottom-1
                                  md:after:w-0 md:after:h-[2px] md:after:bg-blue-500
