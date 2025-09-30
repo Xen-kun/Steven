@@ -33,9 +33,11 @@ export default function TechStack() {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-6">Tech Stack</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          {/* Title with underline (same style as Projects) */}
+          <h2 className="text-3xl font-bold mb-4">Tech Stack</h2>
+          <span className="block w-20 h-0.5 bg-black mx-auto mb-8"></span>
+
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life.
           </p>
         </div>
@@ -60,7 +62,7 @@ export default function TechStack() {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-muted-foreground mb-8">
+          <p className="text-gray-600 mb-8">
             Always learning and exploring new technologies to stay current with industry trends.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">

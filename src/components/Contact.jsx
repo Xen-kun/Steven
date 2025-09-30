@@ -4,12 +4,13 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export function Contact() {
   return (
-    <section className="py-0 px-6 bg-muted/30">
+    <section className="py-20 px-6 bg-muted/30">
       <div className="max-w-4xl mx-auto">
+        {/* Title with underline (consistent style) */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-6">Let's Connect</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+          <span className="block w-20 h-0.5 bg-black mx-auto mb-8"></span>
+          <p className="text-gray-600 max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations. 
             Feel free to reach out if you'd like to work together!
           </p>
@@ -23,18 +24,18 @@ export function Contact() {
               <p className="text-muted-foreground mb-4">
                 Drop me a line for project inquiries or just to say hello.
               </p>
-                <Button asChild variant="outline">
-                    <a 
-                        href="mailto:stevedaleja2001@gmail.com"
-                        rel="noopener noreferrer"
-                        className="hover:bg-black hover:text-white  
-                                transform hover:-translate-y-1 hover:shadow-lg 
-                                transition duration-200 ease-in-out"
-                    >
-                        <Mail className="w-4 h-4 mr-2" />
-                        stevedaleja2001@gmail.com
-                    </a>
-                </Button>
+              <Button asChild variant="outline">
+                <a 
+                  href="mailto:stevedaleja2001@gmail.com"
+                  rel="noopener noreferrer"
+                  className="hover:bg-black hover:text-white  
+                          transform hover:-translate-y-1 hover:shadow-lg 
+                          transition duration-200 ease-in-out"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  stevedaleja2001@gmail.com
+                </a>
+              </Button>
             </CardContent>
           </Card>
           
@@ -45,19 +46,19 @@ export function Contact() {
               <p className="text-muted-foreground mb-4">
                 Check out my code and let's build something amazing together.
               </p>
-                <Button asChild variant="outline">
+              <Button asChild variant="outline">
                 <a 
-                    href="https://github.com/Xen-kun" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:bg-black hover:text-white  
-                    transform hover:-translate-y-1 hover:shadow-lg 
-                    transition duration-200 ease-in-out"
+                  href="https://github.com/Xen-kun" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:bg-black hover:text-white  
+                          transform hover:-translate-y-1 hover:shadow-lg 
+                          transition duration-200 ease-in-out"
                 >
-                    <Github className="w-4 h-4 mr-2" />
-                    View GitHub
+                  <Github className="w-4 h-4 mr-2" />
+                  View GitHub
                 </a>
-                </Button>
+              </Button>
             </CardContent>
           </Card>
         </div>
