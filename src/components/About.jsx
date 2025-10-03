@@ -1,4 +1,5 @@
-import TitleComponent from "./TitleUnderline"
+import TitleComponent from "./TitleUnderline";
+import { Code2, Server, Palette } from "lucide-react";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Passionate Developer</h3>
             <p className="text-gray-600 mb-5">
-              With over <span className="font-semibold">2 over years of experience</span> in web development during my college years, 
+              With over <span className="font-semibold">2 over years of experience</span> in web development during my college days, 
               I specialize in creating modern, responsive applications using the latest technologies. 
               I believe in writing clean, maintainable code and following best practices.
             </p>
@@ -27,21 +28,55 @@ export default function About() {
             <div>
               <h2 className="text-xl font-semibold mb-4">What I can do</h2>
             </div>
+
+            {/* Frontend */}
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm">
+                <Code2 className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-700">Frontend Development</h4>
+                <p className="text-sm text-gray-500">React · TypeScript · Tailwind</p>
+              </div>
+            </div>
+
+            {/* Backend */}
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm">
+                <Server className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-700">Backend Development</h4>
+                <p className="text-sm text-gray-500">Node.js · Express · SQL/NoSQL</p>
+              </div>
+            </div>
+
+            {/* UI/UX */}
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm">
+                <Palette className="w-5 h-5 text-purple-600" />
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-700">UI/UX Design</h4>
+                <p className="text-sm text-gray-500">Figma · Prototyping · Accessibility</p>
+              </div>
+            </div>
             
-            <div>
-              <h4 className="font-medium text-gray-700">Frontend Development</h4>
-            </div>
-
-            <div>
-              <h4 className="font-medium text-gray-700">Backend Development</h4>
-            </div>
-
-            <div>
-              <h4 className="font-medium text-gray-700">UI/UX Design</h4>
+            {/* Currently Learning Card */}
+            <div className="mt-10 md:mt-0">
+              <div className="border rounded-lg p-5 shadow-sm bg-gray-50">
+                <h4 className="font-semibold text-gray-800 mb-2">Currently Learning</h4>
+                <p className="text-gray-600 text-sm">
+                  Exploring <span className="font-medium text-blue-600">Intermediate React</span> concepts 
+                  and diving deeper into the <span className="font-medium text-green-600">MERN Stack</span> 
+                  to build full-stack scalable applications.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
+

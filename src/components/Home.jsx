@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+
 export default function Home() {
   return (
     <section
@@ -11,7 +13,7 @@ export default function Home() {
 
       {/* Subtitle */}
       <h2 className="text-xl md:text-2xl text-gray-600 mb-6">
-        Junior Full Stack Developer
+        Junior Full Stack Developer & Creative UI/UX Designer
       </h2>
 
       {/* Description */}
@@ -21,7 +23,7 @@ export default function Home() {
       </p>
 
       {/* Buttons */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap justify-center">
         <a
           href="#projects"
           className="px-6 py-3 bg-black text-white rounded-md 
@@ -40,7 +42,19 @@ export default function Home() {
         >
           Get In Touch
         </a>
+        <a
+          href="/resume/Daleja_Stevenson_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-gray-100 text-gray-800 rounded-md flex items-center gap-2
+                    hover:bg-black hover:text-white  
+                    transform hover:-translate-y-1 hover:shadow-lg 
+                    transition duration-200 ease-in-out"
+        >
+          <Download size={18} />
+          Resume
+        </a>
       </div>
     </section>
-  )
+  );
 }

@@ -45,48 +45,63 @@ export default function Project() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 overflow-hidden group flex flex-col"
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group flex flex-col w-full max-w-sm mx-auto"
             >
-              <div className="relative overflow-hidden">
+              {/* Image */}
+              <div className="relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded-t-lg w-full h-56 object-cover transition-transform duration-400 ease-in-out group-hover:scale-105 group-hover:brightness-75"
+                  className="w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
               </div>
 
-              <div className="p-6 text-left flex flex-col flex-1 justify-between">
+              {/* Content */}
+              <div className="p-5 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{project.description}</p>
                 </div>
 
-                <div className="mt-auto">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, index) => (
-                      <span key={index} className="px-3 py-1 bg-gray-100 text-sm rounded">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-100 text-xs rounded-md"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
+                {/* Buttons */}
+                <div className="flex gap-3">
                   {project.unfinished ? (
                     <button
                       onClick={() => setIsModalOpen(true)}
-                      className="inline-block px-5 py-2 bg-black text-white rounded hover:-translate-y-1 hover:shadow-md transition"
+                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
                     >
-                      🚀 View Live Demo
+                      🚀 Live Demo
                     </button>
                   ) : project.noPreview ? (
-                    <p className="text-sm text-gray-500 italic">
-                      No preview available on this thesis project
-                    </p>
+                    <p className="text-xs text-gray-500 italic">No preview available on this thesis project.</p>
                   ) : (
                     <a
                       href={project.liveUrl}
-                      className="inline-block px-5 py-2 bg-black text-white rounded hover:-translate-y-1 hover:shadow-md transition"
+                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
                     >
-                      🚀 View Live Demo
+                      🚀 Live Demo
+                    </a>
+                  )}
+
+                  {/* Code button (optional if you have repo link) */}
+                  {project.repoUrl && (
+                    <a
+                      href={project.repoUrl}
+                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md hover:bg-gray-100 transition"
+                    >
+                      💻 Code
                     </a>
                   )}
                 </div>
