@@ -79,7 +79,7 @@ export default function Header() {
           <nav
             className={`${
               isOpen ? "block" : "hidden"
-            } absolute top-full left-0 w-full bg-white/30 backdrop-blur-md border-b border-white/20 md:border-0 md:bg-transparent md:backdrop-blur-0 md:static md:block`}
+            } absolute top-full left-0 w-full  md:static md:block`}
           >
             <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-4 md:p-0">
               {navItems.map((item) => {
