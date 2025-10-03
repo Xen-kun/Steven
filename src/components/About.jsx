@@ -8,30 +8,32 @@ export default function About() {
 
         <TitleComponent> About Me </TitleComponent>
 
+        {/* Grid for About + Skills */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
+          {/* Left Column */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Passionate Developer</h3>
             <p className="text-gray-600 mb-5">
-              With over <span className="font-semibold">2 over years of experience</span> in web development during my college days, 
-              I specialize in creating modern, responsive applications using the latest technologies. 
+              With <span className="font-semibold">over 2 years of experience</span> 
+              in web development during my college days, I specialize in creating 
+              modern, responsive applications using the latest technologies. 
               I believe in writing clean, maintainable code and following best practices.
             </p>
             <p className="text-gray-600">
-              When I'm not coding, you can find me exploring new frameworks and trends, contributing to open source projects, 
-             collaborating or sharing knowledge with the developer community.
+              When I'm not coding, you can find me exploring new frameworks and trends, 
+              contributing to open source projects, collaborating, or sharing knowledge 
+              with the developer community.
             </p>
           </div>
 
-
-          <div className="space-y-4 md:px-12">
-            <div>
-              <h2 className="text-xl font-semibold mb-4">What I can do</h2>
-            </div>
+          {/* Right Column */}
+          <div className="space-y-6 md:px-12">
+            <h2 className="text-xl font-semibold">What I can do</h2>
 
             {/* Frontend */}
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm bg-white">
                 <Code2 className="w-5 h-5 text-blue-600" />
               </div>
               <div>
@@ -42,7 +44,7 @@ export default function About() {
 
             {/* Backend */}
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm bg-white">
                 <Server className="w-5 h-5 text-green-600" />
               </div>
               <div>
@@ -53,7 +55,7 @@ export default function About() {
 
             {/* UI/UX */}
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-100 shadow-sm bg-white">
                 <Palette className="w-5 h-5 text-purple-600" />
               </div>
               <div>
@@ -61,22 +63,22 @@ export default function About() {
                 <p className="text-sm text-gray-500">Figma · Prototyping · Accessibility</p>
               </div>
             </div>
-            
-            {/* Currently Learning Card */}
-            <div className="mt-10 md:mt-0">
-              <div className="border rounded-lg p-5 shadow-sm bg-gray-50">
-                <h4 className="font-semibold text-gray-800 mb-2">Currently Learning</h4>
-                <p className="text-gray-600 text-sm">
-                  Exploring <span className="font-medium text-blue-600">Intermediate React</span> concepts 
-                  and diving deeper into the <span className="font-medium text-green-600">MERN Stack</span> 
-                  to build full-stack scalable applications.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
+
+        {/* Currently Learning Card - Center Below */}
+        <div className="mt-12 flex justify-center">
+          <div className="border rounded-lg p-5 shadow-sm bg-gray-50 max-w-md text-center">
+            <h4 className="font-semibold text-gray-800 mb-2">Currently Learning</h4>
+            <p className="text-gray-600 text-sm">
+              Continuously learning <span className="font-medium text-blue-600">Intermediate to Advance React.js</span> concepts 
+              and currently exploring <span className="font-medium text-green-600">MERN Stack </span> 
+              to build full-stack scalable applications.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
-

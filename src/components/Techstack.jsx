@@ -15,7 +15,7 @@ const techCategories = [
   {
     category: "Tools & DevOps",
     icon: <Cloud className="w-6 h-6 text-orange-500" />,
-    technologies: ["Git", "Docker", "Vercel", "Linux", "Nginx", "CI/CD", "XAMPP"],
+    technologies: ["Git", "Docker", "Vercel", "Linux", "Nginx", "CI/CD", "XAMPP", "Figma"],
   },
 ];
 
