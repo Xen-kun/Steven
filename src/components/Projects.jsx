@@ -47,7 +47,7 @@ const projects = [
     title: "My Personal Portfolio UI",
     description: "My personal portfolio design initially created in Figma before depployed in vercel, focused on minimalistic layouts and modern typography.",
     image: "../images/PortfolioWebsite.png",
-    technologies: ["Figma", "Prototyping", "Auto Layout"],
+    technologies: ["Figma", "Prototyping"],
     liveUrl: "https://www.figma.com/proto/6u8cs6xHzsq0gJCK25U5cA/Untitled?page-id=242%3A2&node-id=244-7&viewport=-940%2C25%2C0.17&t=80lfPygEDG3wNFr2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=244%3A7",
   },
   {
@@ -56,7 +56,7 @@ const projects = [
     title: "E-Commerce Dashboard UI",
     description: "A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
     image: "../images/ECommerce.png",
-    technologies: ["Figma", "UI Design", "Wireframing"],
+    technologies: ["Figma", "UI Design", "Prototyping"],
     liveUrl: "https://www.figma.com/",
   },
   {
