@@ -38,7 +38,7 @@ export default function About() {
               </div>
               <div>
                 <h4 className="font-medium text-gray-700">Frontend Development</h4>
-                <p className="text-sm text-gray-500">React · TypeScript · Tailwind</p>
+                <p className="text-sm text-gray-500">React  · Tailwind</p>
               </div>
             </div>
 

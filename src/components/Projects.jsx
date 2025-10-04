@@ -1,3 +1,4 @@
+import TitleComponent from "./TitleUnderline";
 import { useState } from "react";
 
 const projects = [
@@ -35,8 +36,7 @@ export default function Project() {
   return (
     <section id="projects" className="bg-gray-100 w-full max-w-5xl mx-auto">
       <div className="container mx-auto px-6 md:px-0 text-center">
-        <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
-        <span className="block w-20 h-0.5 bg-black mx-auto mb-8"></span>
+        <TitleComponent>Featured Projects</TitleComponent>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Here are some of my recent projects that showcase my skills and passion for development.
         </p>

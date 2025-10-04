@@ -1,5 +1,6 @@
 import { Badge } from "./ui/badge";
 import { Code, Database, Cloud } from "lucide-react"; 
+import TitleComponent from "./TitleUnderline";
 
 const techCategories = [
   {
@@ -25,8 +26,7 @@ export default function TechStack() {
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">Tech Stack</h2>
-          <span className="block w-20 h-0.5 bg-black mx-auto mb-8"></span>
+          <TitleComponent>Tech Stacks</TitleComponent>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life.
           </p>
