@@ -52,7 +52,7 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Collaboration Card */}
+          {/* Github Card */}
           <div className="group p-6 text-center border border-gray-200 rounded-xl shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
             <div className="transition-transform duration-300 group-hover:scale-110">
               <Github className="w-10 h-10 mx-auto mb-3 text-purple-600" />

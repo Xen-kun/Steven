@@ -109,7 +109,7 @@ export default function Header() {
                   className="block bg-black text-white px-4 py-2 rounded-md 
                              hover:bg-gray-800 md:inline-block"
                 >
-                  Hire Me
+                  Work With Me
                 </a>
               </li>
             </ul>

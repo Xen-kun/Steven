@@ -7,7 +7,7 @@ const projects = [
     title: "Budget Planner",
     description: "A budget management tool that helps users track expenses, set savings goals, and analyze spending habits.",
     image: "../images/Budgetplanner.png",
-    technologies: ["React", "Node.js", "MySQL"],
+    technologies: ["React", "Node.js", "TailwindCSS"],
     liveUrl: "#",
     unfinished: true, // mark as unfinished
   },
@@ -24,9 +24,18 @@ const projects = [
     title: "Weather Analytics Dashboard",
     description: "A dashboard that visualizes weather trends and forecasts with clean charts and statistics.",
     image: "../images/WeatherAnalytics.png",
-    technologies: ["React", "Node.js", "MySQL"],
+    technologies: ["React", "Node.js", "TailwindCSS"],
     liveUrl: "#",
     unfinished: true, // mark as unfinished
+  },
+  {
+    id: 4,
+    title: "Pokemon WonderTrade",
+    description: "A data analysis school project simulating Pokémon Wonder Trade, exploring trade patterns and probabilities using Python and visualization tools.",
+    image: "../images/Analytics.png",
+    technologies: ["Python", "Pandas", "Matplotlib", "Google Colab"],
+    liveUrl: "https://colab.research.google.com/drive/1QGgRgEdqeTskHY-IBm75nZo_V-MoZNez?usp=sharing",
+    unfinished: false, // now marked as finished
   }
 ];
 
@@ -45,7 +54,14 @@ export default function Project() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group flex flex-col w-full max-w-sm mx-auto"
+              onClick={() => {
+                if (!project.unfinished && !project.noPreview && project.liveUrl) {
+                  window.open(project.liveUrl, "_blank");
+                } else if (project.unfinished) {
+                  setIsModalOpen(true);
+                }
+              }}
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group flex flex-col w-full max-w-sm mx-auto cursor-pointer"
             >
               {/* Image */}
               <div className="relative">
@@ -76,7 +92,10 @@ export default function Project() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3">
+                <div
+                  className="flex gap-3"
+                  onClick={(e) => e.stopPropagation()} // 🔒 Prevents triggering card click
+                >
                   {project.unfinished ? (
                     <button
                       onClick={() => setIsModalOpen(true)}
@@ -85,10 +104,14 @@ export default function Project() {
                       🚀 Live Demo
                     </button>
                   ) : project.noPreview ? (
-                    <p className="text-xs text-gray-500 italic">No preview available on this thesis project.</p>
+                    <p className="text-xs text-gray-500 italic">
+                      No preview available on this thesis project.
+                    </p>
                   ) : (
                     <a
                       href={project.liveUrl}
+                      target="_blank"
+                      onClick={(e) => e.stopPropagation()} // 🔒 Avoid double opening
                       className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
                     >
                       🚀 Live Demo
@@ -99,6 +122,8 @@ export default function Project() {
                   {project.repoUrl && (
                     <a
                       href={project.repoUrl}
+                      target="_blank"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md hover:bg-gray-100 transition"
                     >
                       💻 Code
@@ -129,3 +154,4 @@ export default function Project() {
     </section>
   );
 }
+
