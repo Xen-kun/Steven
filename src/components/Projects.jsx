@@ -2,138 +2,165 @@ import TitleComponent from "./TitleUnderline";
 import { useState } from "react";
 
 const projects = [
+  // 🧠 CODING PROJECTS
   {
     id: 1,
+    category: "coding",
     title: "Budget Planner",
     description: "A budget management tool that helps users track expenses, set savings goals, and analyze spending habits.",
     image: "../images/Budgetplanner.png",
-    technologies: ["React", "Node.js", "TailwindCSS"],
-    liveUrl: "#",
-    unfinished: true, // mark as unfinished
+    technologies: ["React", "Node.js", "TailwindCSS","Shadcn UI"],
+    unfinished: true,
   },
   {
     id: 2,
-    title: "Resource-Aware De Novo Genome Assembly Algorithm for Short Read Sequences on Lower-end Machine",
+    category: "coding",
+    title: "Resource-Aware De Novo Genome Assembly Algorithm",
     description: "An algorithm for genome assembly designed for lower-end machines, optimizing memory usage and efficiency.",
     image: "../images/DeNovoAssembly.png",
     technologies: ["Python", "BioPython", "NumPy", "Quast", "FastP", "Tkinter"],
-    noPreview: true
+    noPreview: true,
   },
   {
     id: 3,
+    category: "coding",
     title: "Weather Analytics Dashboard",
     description: "A dashboard that visualizes weather trends and forecasts with clean charts and statistics.",
     image: "../images/WeatherAnalytics.png",
-    technologies: ["React", "Node.js", "TailwindCSS"],
-    liveUrl: "#",
-    unfinished: true, // mark as unfinished
+    technologies: ["React", "Node.js", "TailwindCSS", ,"Shadcn UI"],
+    unfinished: true,
   },
   {
     id: 4,
-    title: "Pokemon WonderTrade",
-    description: "A data analysis school project simulating Pokémon Wonder Trade, exploring trade patterns and probabilities using Python and visualization tools.",
+    category: "coding",
+    title: "Pokémon WonderTrade Data Analysis",
+    description: "A data analysis project simulating Pokémon Wonder Trade, exploring trade patterns and probabilities using Python and visualization tools.",
     image: "../images/Analytics.png",
     technologies: ["Python", "Pandas", "Matplotlib", "Google Colab"],
     liveUrl: "https://colab.research.google.com/drive/1QGgRgEdqeTskHY-IBm75nZo_V-MoZNez?usp=sharing",
-    unfinished: false, // now marked as finished
-  }
+  },
+
+  // 🎨 FIGMA PROJECTS
+  {
+    id: 5,
+    category: "figma",
+    title: "My Personal Portfolio UI",
+    description: "My personal portfolio design initially created in Figma before depployed in vercel, focused on minimalistic layouts and modern typography.",
+    image: "../images/PortfolioWebsite.png",
+    technologies: ["Figma", "Prototyping", "Auto Layout"],
+    liveUrl: "https://www.figma.com/proto/6u8cs6xHzsq0gJCK25U5cA/Untitled?page-id=242%3A2&node-id=244-7&viewport=-940%2C25%2C0.17&t=80lfPygEDG3wNFr2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=244%3A7",
+  },
+  {
+    id: 6,
+    category: "figma",
+    title: "E-Commerce Dashboard UI",
+    description: "A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
+    image: "../images/ECommerce.png",
+    technologies: ["Figma", "UI Design", "Wireframing"],
+    liveUrl: "https://www.figma.com/",
+  },
+  {
+    id: 7,
+    category: "coding",
+    title: "PangaldawXpress",
+    description: "A live food delivery platform for Filipino dishes, featuring an admin dashboard for managing orders, menus, and customer analytics with a clean, data-driven design.A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
+    image: "../images/PangaldawXpress.png",
+    technologies: ["Hostinger Web Builder"],
+    liveUrl: "https://pangaldawxpress.shop/",
+  },
 ];
 
 export default function Project() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Separate projects by category
+  const codingProjects = projects.filter((p) => p.category === "coding");
+  const figmaProjects = projects.filter((p) => p.category === "figma");
+
+  // ✅ Reusable Project Grid Component
+  const ProjectGrid = ({ title, items }) => (
+    <div className="mb-20">
+      <h2 className="text-2xl font-bold mb-6 text-center">{title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {items.map((project) => (
+          <div
+            key={project.id}
+            onClick={() => {
+              if (!project.unfinished && !project.noPreview && project.liveUrl) {
+                window.open(project.liveUrl, "_blank");
+              } else if (project.unfinished) {
+                setIsModalOpen(true);
+              }
+            }}
+            className="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group flex flex-col w-full max-w-sm mx-auto cursor-pointer"
+          >
+            <div className="relative">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+              />
+            </div>
+
+            <div className="p-5 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 text-sm mb-4">{project.description}</p>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech, i) => (
+                  <span key={i} className="px-2 py-1 bg-gray-100 text-xs rounded-md">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div
+                className="flex gap-3"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {project.unfinished ? (
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
+                  >
+                    🚀 Live Demo
+                  </button>
+                ) : project.noPreview ? (
+                  <p className="text-xs text-gray-500 italic">No preview available on this thesis project.</p>
+                ) : (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
+                  >
+                    🚀 Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
-    <section id="projects" className="bg-gray-100 w-full max-w-5xl mx-auto">
+    <section id="projects" className="bg-gray-100 w-full max-w-5xl mx-auto py-16">
       <div className="container mx-auto px-6 md:px-0 text-center">
         <TitleComponent>Featured Projects</TitleComponent>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Here are some of my recent projects that showcase my skills and passion for development.
+          Here are some of my recent and school projects that showcase my skills in both <span className="font-medium text-black">development</span> and <span className="font-medium text-black">design</span>.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              onClick={() => {
-                if (!project.unfinished && !project.noPreview && project.liveUrl) {
-                  window.open(project.liveUrl, "_blank");
-                } else if (project.unfinished) {
-                  setIsModalOpen(true);
-                }
-              }}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden group flex flex-col w-full max-w-sm mx-auto cursor-pointer"
-            >
-              {/* Image */}
-              <div className="relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                />
-              </div>
+        {/* Coding Projects */}
+        <ProjectGrid title="💻 Coding Projects" items={codingProjects} />
 
-              {/* Content */}
-              <div className="p-5 flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                </div>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-gray-100 text-xs rounded-md"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Buttons */}
-                <div
-                  className="flex gap-3"
-                  onClick={(e) => e.stopPropagation()} // 🔒 Prevents triggering card click
-                >
-                  {project.unfinished ? (
-                    <button
-                      onClick={() => setIsModalOpen(true)}
-                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
-                    >
-                      🚀 Live Demo
-                    </button>
-                  ) : project.noPreview ? (
-                    <p className="text-xs text-gray-500 italic">
-                      No preview available on this thesis project.
-                    </p>
-                  ) : (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      onClick={(e) => e.stopPropagation()} // 🔒 Avoid double opening
-                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-900 transition"
-                    >
-                      🚀 Live Demo
-                    </a>
-                  )}
-
-                  {/* Code button (optional if you have repo link) */}
-                  {project.repoUrl && (
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-md hover:bg-gray-100 transition"
-                    >
-                      💻 Code
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Figma Projects */}
+        <ProjectGrid title="🎨 Figma Designs" items={figmaProjects} />
       </div>
 
       {/* Modal */}
@@ -154,4 +181,3 @@ export default function Project() {
     </section>
   );
 }
-

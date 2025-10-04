@@ -1,5 +1,5 @@
 import TitleComponent from "./TitleUnderline";
-import { Mail, MessageSquare, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MessageSquare, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -59,10 +59,10 @@ export default function Contact() {
             </div>
             <h3 className="text-lg font-semibold mb-2">Collaboration</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Check out my code and let's build something amazing together.
+              Check out my personal and school project. You can message me for collaborations.
             </p>
             <a
-              href="https://github.com/Xen-kun"
+              href="https://github.com/Xen-kun?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium hover:bg-black hover:text-white transition-all duration-200"
@@ -75,13 +75,22 @@ export default function Contact() {
 
         {/* Social icons */}
         <div className="flex justify-center gap-4 mb-8">
-          {[Github, Linkedin, Twitter, Mail].map((Icon, i) => (
-            <div
+          {[
+            { Icon: Instagram, link: "https://www.instagram.com/xnpai/" },
+            { Icon: Linkedin, link: "https://www.linkedin.com/in/stevenson-daleja-540858311/" },
+            { Icon: Twitter, link: "https://twitter.com/" }, // update with your actual Twitter link if any
+            { Icon: Mail, link: "mailto:stevedaleja2001@gmail.com" },
+          ].map(({ Icon, link }, i) => (
+            <a
               key={i}
-              className="p-3 border border-gray-200 rounded-lg transition-all duration-300 hover:scale-125 hover:-translate-y-1 hover:bg-black hover:text-white cursor-pointer"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 border border-gray-200 rounded-lg transition-all duration-300 
+                        hover:scale-125 hover:-translate-y-1 hover:bg-black hover:text-white cursor-pointer"
             >
               <Icon className="w-5 h-5" />
-            </div>
+            </a>
           ))}
         </div>
 
@@ -97,12 +106,11 @@ export default function Contact() {
                 Available for hire
               </span>
               <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue-700">
-                Remote friendly
+                Can work immediately
               </span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
