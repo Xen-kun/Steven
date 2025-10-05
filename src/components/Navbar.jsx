@@ -82,7 +82,6 @@ export default function Header() {
           } absolute top-full left-0 w-full md:static md:block 
             ${isOpen ? "bg-white/70 backdrop-blur-md border-t border-white/20 shadow-md md:bg-transparent md:backdrop-blur-none md:border-0 md:shadow-none" : ""}`}
         >
-
           <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-4 md:p-0">
             {navItems.map((item) => {
               const id = item.toLowerCase().replace(" ", "");

@@ -57,7 +57,7 @@ const projects = [
     description: "A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
     image: "../images/ECommerce.png",
     technologies: ["Figma", "UI Design", "Prototyping"],
-    liveUrl: "https://www.figma.com/",
+    liveUrl: "https://www.figma.com/proto/6u8cs6xHzsq0gJCK25U5cA/Untitled?page-id=244%3A8&node-id=244-9&p=f&viewport=-588%2C237%2C2.14&t=qlTrhd9gv025rsJe-1&scaling=min-zoom&content-scaling=fixed",
   },
   {
     id: 7,
