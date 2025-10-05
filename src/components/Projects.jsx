@@ -68,6 +68,15 @@ const projects = [
     technologies: ["Hostinger Web Builder"],
     liveUrl: "https://pangaldawxpress.shop/",
   },
+  {
+    id: 8,
+    category: "figma",
+    title: "Chat UI",
+    description: "A semi Discord-inspired messaging platform designed for e-learning. It includes features such as servers, group chats, and discussion channels to support academic collaboration. The interface focuses on simplicity, organization, and user engagement—providing students and educators with a familiar yet structured environment for online learning.",
+    image: "../images/ChatUI.png",
+    technologies: ["Figma", "Prototyping"],
+    liveUrl: "https://www.figma.com/design/vETskYjyBMPfkGd9eaT9RY/Chat-UI--HCI--Project?node-id=101-3&t=Xwih1BXWODkIktTn-1",
+  },
 ];
 
 export default function Project() {
