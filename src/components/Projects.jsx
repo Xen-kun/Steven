@@ -48,7 +48,7 @@ const projects = [
     description: "My personal portfolio design initially created in Figma before depployed in vercel, focused on minimalistic layouts and modern typography.",
     image: "../images/PortfolioWebsite.png",
     technologies: ["Figma", "Prototyping"],
-    liveUrl: "https://www.figma.com/proto/6u8cs6xHzsq0gJCK25U5cA/Untitled?page-id=242%3A2&node-id=244-7&viewport=-940%2C25%2C0.17&t=80lfPygEDG3wNFr2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=244%3A7",
+    liveUrl: "https://www.figma.com/design/6u8cs6xHzsq0gJCK25U5cA/Figma-Designs?node-id=242-2&t=ZLnrENMqs49ENpBB-1",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const projects = [
     description: "A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
     image: "../images/ECommerce.png",
     technologies: ["Figma", "UI Design", "Prototyping"],
-    liveUrl: "https://www.figma.com/proto/6u8cs6xHzsq0gJCK25U5cA/Untitled?page-id=244%3A8&node-id=244-9&p=f&viewport=-588%2C237%2C2.14&t=qlTrhd9gv025rsJe-1&scaling=min-zoom&content-scaling=fixed",
+    liveUrl: "https://www.figma.com/design/6u8cs6xHzsq0gJCK25U5cA/Figma-Designs?node-id=244-8&t=ZLnrENMqs49ENpBB-1",
   },
   {
     id: 7,
