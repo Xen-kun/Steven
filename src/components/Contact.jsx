@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
             <h3 className="text-lg font-semibold mb-2">Collaboration</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Check out my personal and school project. You can message me for collaborations.
+              Check out my personal and academic projects. You can message me for collaborations.
             </p>
             <a
               href="https://github.com/Xen-kun?tab=repositories"
@@ -99,7 +99,7 @@ export default function Contact() {
           <div className="border border-gray-200 rounded-xl p-5 shadow-md max-w-[480px] text-center">
             <p className="text-gray-700 text-sm mb-4">
               Currently open to new opportunities and exciting projects.  
-              Let&apos;s create something amazing together!
+              Let&apos;s create something amazing together.
             </p>
             <div className="flex justify-center gap-3">
               <span className="px-3 py-1 rounded-full text-xs bg-green-100 text-green-700">

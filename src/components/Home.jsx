@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-white"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-5 bg-white"
     >
       {/* Title */}
       <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
@@ -18,6 +18,7 @@ export default function Home() {
 
       {/* Description */}
       <p className="max-w-2xl text-gray-500 mb-8">
+        I recently graduated with a degree in <span className="text-gray-800 font-bold">Computer Science </span>last July 11,2025 from Mariano Marcos State University.
         I craft digital experiences that blend beautiful design with robust functionality. 
         Passionate about building scalable applications and exploring cutting-edge technologies.
       </p>

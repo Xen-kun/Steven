@@ -12,6 +12,7 @@ const projects = [
     technologies: ["React", "Node.js", "TailwindCSS","Shadcn UI"],
     unfinished: true,
   },
+
   {
     id: 2,
     category: "coding",
@@ -21,6 +22,7 @@ const projects = [
     technologies: ["Python", "BioPython", "NumPy", "Quast", "FastP", "Tkinter"],
     noPreview: true,
   },
+
   {
     id: 3,
     category: "coding",
@@ -30,6 +32,7 @@ const projects = [
     technologies: ["React", "Node.js", "TailwindCSS", ,"Shadcn UI"],
     unfinished: true,
   },
+
   {
     id: 4,
     category: "coding",
@@ -40,7 +43,6 @@ const projects = [
     liveUrl: "https://colab.research.google.com/drive/1QGgRgEdqeTskHY-IBm75nZo_V-MoZNez?usp=sharing",
   },
 
-  // 🎨 FIGMA PROJECTS
   {
     id: 5,
     category: "figma",
@@ -50,24 +52,27 @@ const projects = [
     technologies: ["Figma", "Prototyping"],
     liveUrl: "https://www.figma.com/design/6u8cs6xHzsq0gJCK25U5cA/Figma-Designs?node-id=242-2&t=ZLnrENMqs49ENpBB-1",
   },
+
   {
     id: 6,
     category: "figma",
-    title: "E-Commerce Dashboard UI",
+    title: "Coffee Ecommerce Website",
     description: "A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
     image: "../images/ECommerce.png",
     technologies: ["Figma", "UI Design", "Prototyping"],
     liveUrl: "https://www.figma.com/design/6u8cs6xHzsq0gJCK25U5cA/Figma-Designs?node-id=244-8&t=ZLnrENMqs49ENpBB-1",
   },
+
   {
     id: 7,
     category: "coding",
     title: "PangaldawXpress",
-    description: "A live food delivery platform for Filipino dishes, featuring an admin dashboard for managing orders, menus, and customer analytics with a clean, data-driven design.A data-driven admin dashboard concept for e-commerce analytics and inventory management that soon to be develop and deploy on the internet.",
+    description: "A live food delivery platform for Filipino dishes, featuring an admin dashboard for managing orders, menus, and customer analytics with a clean, data-driven design.A data-driven admin dashboard concept for e-commerce analytics and inventory management. Check out the live demo!",
     image: "../images/PangaldawXpress.png",
     technologies: ["Hostinger Web Builder"],
     liveUrl: "https://pangaldawxpress.shop/",
   },
+
   {
     id: 8,
     category: "figma",
@@ -75,7 +80,16 @@ const projects = [
     description: "A semi Discord-inspired messaging platform designed for e-learning. It includes features such as servers, group chats, and discussion channels to support academic collaboration. The interface focuses on simplicity, organization, and user engagement—providing students and educators with a familiar yet structured environment for online learning.",
     image: "../images/ChatUI.png",
     technologies: ["Figma", "Prototyping"],
-    liveUrl: "https://www.figma.com/design/vETskYjyBMPfkGd9eaT9RY/Chat-UI--HCI--Project?node-id=101-3&t=Xwih1BXWODkIktTn-1",
+    liveUrl: "https://www.figma.com/design/vETskYjyBMPfkGd9eaT9RY/Chat-UI--HCI--Project?node-id=101-3&t=Xwih1BXWODkIktTn-1", 
+  },
+
+  {id: 9,
+    category: "coding",
+    title: "Revamp Marci Metzger Homepage",
+    description: "A redesigned static Home page inspired by an existing website (https://marcimetzger.com). The project enhances visual design, usability, and responsiveness while retaining original content and images for a cleaner, more engaging user experience.",
+    image: "../images/MarciMetzers.png",
+    technologies: ["React", "Node.js", "TailwindCSS"],
+    liveUrl: "https://marci-metzger-home.vercel.app/",
   },
 ];
 
@@ -86,7 +100,7 @@ export default function Project() {
   const codingProjects = projects.filter((p) => p.category === "coding");
   const figmaProjects = projects.filter((p) => p.category === "figma");
 
-  // ✅ Reusable Project Grid Component
+  // Reusable Project Grid Component
   const ProjectGrid = ({ title, items }) => (
     <div className="mb-20">
       <h2 className="text-2xl font-bold mb-6 text-center">{title}</h2>

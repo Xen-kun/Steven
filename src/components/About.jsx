@@ -15,15 +15,15 @@ export default function About() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Passionate Developer</h3>
             <p className="text-gray-600 mb-5">
-              With <span className="font-semibold">over 2 years of experience</span> 
-              in web development during my college days, I specialize in creating 
+              With <span className="font-semibold">over 2 years of experience </span> 
+              in software development during my college days, constributing academic and side projects, I specialize in creating 
               modern, responsive applications using the latest technologies. 
               I believe in writing clean, maintainable code and following best practices.
             </p>
             <p className="text-gray-600">
-              When I'm not coding, you can find me exploring new frameworks and trends, 
+              When I'm not coding, you can find me exploring frameworks and trends, 
               contributing to open source projects, collaborating, or sharing knowledge 
-              with the developer community.
+              with my peers or cicle.
             </p>
           </div>
 
@@ -66,18 +66,17 @@ export default function About() {
           </div>
         </div>
 
-        {/* Currently Learning Card - Center Below */}
-        <div className="mt-12 flex justify-center">
+        {/* Currently Learning Card */}
+      <div className="mt-[60px] flex justify-center">
           <div className="border rounded-lg p-5 shadow-sm bg-gray-50 max-w-md text-center">
             <h4 className="font-semibold text-gray-800 mb-2">Currently Learning</h4>
             <p className="text-gray-600 text-sm">
-              Continuously learning <span className="font-medium text-blue-600">Intermediate to Advance React.js</span> concepts 
+              Continuously learning <span className="font-medium text-blue-600">React.js </span>core concepts 
               and currently exploring <span className="font-medium text-green-600">MERN Stack </span> 
               to build full-stack scalable applications.
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );
